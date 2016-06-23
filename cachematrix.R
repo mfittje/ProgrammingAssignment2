@@ -1,15 +1,21 @@
-## Put comments here that give an overall description of what your
-## functions do
+## gives inverse for "x" unless it already exists in which it returns cache
 
-## Write a short comment describing this function
+## gives inverse for "x" and caches it as "s"
 
 makeCacheMatrix <- function(x = matrix()) {
-
+ 		s <- solve(x)
+		s<<- s
 }
-
-
-## Write a short comment describing this function
+## checks to see if "s" exists and returns message and "s" if it does
+## gives inverse for "x" if it doesn't.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+		if(!is.null(s)) {
+                message("getting cached data")
+                return(s)
+	        }
+		else 
+      	  s <- solve(x)
+        	  s   
+## Return a matrix that is the inverse of 'x'
 }
